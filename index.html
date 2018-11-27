@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Design System for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title>Cryptograph</title>
+  <!-- Favicon -->
+  <link href="./assets/img/brand/icon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="./assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="./assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Argon CSS -->
+  <link type="text/css" href="./assets/css/argon.css?v=1.0.0" rel="stylesheet">
+  <!-- Docs CSS -->
+  <link type="text/css" href="./assets/css/docs.min.css" rel="stylesheet">
+</head>
+
+<body>
+ <div id="app" >
+  <caesar-cipher inline-template>
+   <main>
+    <section class="section section-components">
+      <div class="container">
+        <h3 class="h4 text-success font-weight-bold mb-4">Cryptography projects </h4>
+          <div class="row justify-content-center">
+            <div class="col-lg-12">
+              <!-- Tabs with icons -->
+              <div class="mb-3">
+               
+              </div>
+              <div class="nav-wrapper">
+                <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true"><i class="ni ni-favourite-28"></i>&nbsp;Welcome</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="ni ni-atom mr-2"></i>Crypto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><i class="ni ni-chat-round mr-2"></i>About</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card shadow">
+                <div class="card-body">
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      <p class="text-center text-primary display-4"> Welcome to Cryptography Projects </p>
+                      <hr>
+                      <p class="description"> In this project you gonna be seeing how to encrypt text .especially plaintext and ciphertext in modulo 26 using pure javascript. <br> However, we need a very efficient method to pass our data when it get into processing as a method or function whatever you call ..so to solve it i use VueJs Framework here</p>
+
+                      <hr>
+                      <p class="text-warning text-center"> "All of my works, code are already licensed under MIT License so this project also have copyright option too"</p>
+                      <p class="text-success text-center display-6">Come join our facebook page for further information <a href="https://www.mehmjanakh.wordpress.com" class="nav-link" target="_blank">here</a></p>
+                    </div>
+
+
+
+
+
+                    <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+
+
+
+                      <div class="card">
+                        <div class="py-5 bg-secondary">
+                          <div class="container">
+                            <!-- Inputs (alternative) -->
+                            <div class="mb-3">
+                              <small class="display-4">Available Options</small>
+                              <hr>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-4 col-sm-6">
+                               <small class="text-primary mb-0" style="padding: 2px;" >Char in modulo 26</small>
+                               <div class="form-group">
+                                <input type="text" id="source-string" placeholder="Regular" class="source-string form-control form-control-alternative"  v-model="possible" 
+                                value="{possible}"
+                                required/>
+                              </div>
+
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                             <small class="text-primary mb-0" style="padding: 2px;">Key code</small>
+                             <div class="form-group">
+                              <input type="number"  class="shift-value form-control form-control-alternative "  v-model="shift" 
+                              value="edit me"
+                              required/>
+                            </div>
+
+                          </div>
+                          <div class="col-lg-4 col-sm-6">
+
+                            <div>
+                               &nbsp;&nbsp;&nbsp;<small class="text-primary mb-0" style="padding: 2px;" >Choice</small>
+                            </div>
+                           
+
+
+
+                            <div class="row">
+
+                             <div class="col-sm-1">
+
+                             </div>
+                             <label class="custom-toggle">
+                              <input id="encodeToggle" type="checkbox" checked v-on:click="checkboxToggle">
+                              <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+                            <div class="col-sm-1">
+
+                            </div>
+
+                            <div class="mb-3">
+                              <small class="text-uppercase font-weight-bold">ENCODE &nbsp;&nbsp; /&nbsp;&nbsp; DECODE</small>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+                <div class="card">
+                 <div class="py-5 bg-secondary">
+                  <div class="container">
+
+
+                    <div  class="box-wrapper container" :class="{ encode: toggle, decode: !toggle }">
+                      <!-- Inputs (alternative) -->
+                      <div class="mb-3">
+                        <small class="display-4">Display results</small>
+                              <hr>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-4 col-sm-6">
+
+                          <div class="form-group">
+                            <small class="text-primary mb-0" style="padding: 2px;">Status</small>
+                            <div class="input-group input-group-alternative mb-4">
+
+                              <h2 class="btn btn-sm btn-success" > {{status}} </h2>
+
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                          <div class="form-group has-success">
+                            <textarea id="encode-cmd" class="code-value btn btn-block btn-warning mb-3" style="background-color: #34ace0;"  rol="4"
+                            v-on:keyup="encoder($event)" 
+                            >{{currentDecoded}}</textarea>
+                          </div>
+
+
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                          <small class="text-primary mb-0" style="padding: 2px;">Result</small>
+                          <div class="form-group has-success">
+                            <p class="code-value form-control form-control-alternative is-valid" style="background-color: #34ace0; color: white; font-size: 20px;"> {{currentEncoded}} </p>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+
+
+            </div>
+            <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
+              <p class="description text-center"> I wrote this project just for educational purpose. All the code and explaination, how algorithm works and how ciphertext and Cryptograph is used in here are reference to IV year ACN textbook in page1083.</p>
+              <hr>
+              <p class="text-center text-success display-3">Coded by nova</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+</caesar-cipher>
+</div>
+<footer class="footer has-cards">
+
+  <div class="container">
+
+    <hr>
+    <div class="row align-items-center justify-content-md-between">
+      <div class="col-md-6">
+        <div class="copyright">
+          &copy; 2018
+          <a href="https://www.mehmjanakh.wordpress.com" target="_blank">Greentech Innovation Group</a>.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul class="nav nav-footer justify-content-end">
+          <li class="nav-item">
+            <a href="https://www.mehmjanakh.wordpress.com" class="nav-link" target="_blank">Facebook Page</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.mehmjanakh.wordpress.com/presentation" class="nav-link" target="_blank">Facebook Group</a>
+          </li>
+          <li class="nav-item">
+            <a href="http://www.mehmjanakh.wordpress.com" class="nav-link" target="_blank">Official website</a>
+          </li>
+          <li class="nav-item">
+          <a href="./examples/profile.html" style="font-weight: bold; font-family: Apple Garamond Light;">Greentech Innovation Group</a>
+          </li>
+            
+          <li class="nav-item">
+            <a href="https://www.mehmjanakh.wordpress.com" class="nav-link" target="_blank">MIT License</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Core -->
+<script src="./assets/vendor/jquery/jquery.min.js"></script>
+<script src="./assets/vendor/popper/popper.min.js"></script>
+<script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="./assets/vendor/headroom/headroom.min.js"></script>
+<!-- Optional JS -->
+<script src="./assets/vendor/onscreen/onscreen.min.js"></script>
+<script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+<script src="./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<!-- Argon JS -->
+<script src="./assets/js/argon.js?v=1.0.0"></script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="./assets/js/cipher.js"></script>
+</html>
